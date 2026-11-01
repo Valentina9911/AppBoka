@@ -3,6 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import { errorHandler } from './middlewares/error.middleware';
 
+import authRoutes from './modules/auth/auth.routes';
 
 const app = express();
 
@@ -19,6 +20,7 @@ if (process.env.NODE_ENV === 'development') {
 
 const apiRouter = express.Router();
 
+apiRouter.use('/auth', authRoutes);
 
 
 app.use('/api', apiRouter);
