@@ -100,7 +100,7 @@ export const MainLayout = () => {
         </div>
 
         <nav className="flex-1 w-full space-y-4 px-2 md:px-4 overflow-y-auto">
-          {menuItems.filter(item => ([] as string[]).includes(item.path)).map((item) => {
+          {menuItems.filter(item => ['/roles', '/empleados'].includes(item.path)).map((item) => {
             if (!hasPermission(item.roles)) return null;
 
             return (
