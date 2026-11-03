@@ -5,7 +5,10 @@ import { errorHandler } from './middlewares/error.middleware';
 
 import authRoutes from './modules/auth/auth.routes';
 import clientesRoutes from './modules/clientes/clientes.routes';
+import productosRoutes from './modules/productos/productos.routes';
 import usuariosRoutes from './modules/usuarios/usuarios.routes';
+import categoriasRoutes from './modules/categorias/categorias.routes';
+import modificadoresRoutes from './modules/modificadores/modificadores.routes';
 
 const app = express();
 
@@ -24,7 +27,10 @@ const apiRouter = express.Router();
 
 apiRouter.use('/auth', authRoutes);
 apiRouter.use('/clientes', clientesRoutes);
+apiRouter.use('/productos', productosRoutes);
 apiRouter.use('/usuarios', usuariosRoutes);
+apiRouter.use('/categorias', categoriasRoutes); 
+apiRouter.use('/modificadores', modificadoresRoutes);
 
 
 app.use('/api', apiRouter);
