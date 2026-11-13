@@ -7,6 +7,7 @@ import authRoutes from './modules/auth/auth.routes';
 import clientesRoutes from './modules/clientes/clientes.routes';
 import productosRoutes from './modules/productos/productos.routes';
 import usuariosRoutes from './modules/usuarios/usuarios.routes';
+import configuracionRoutes from './modules/configuracion/configuracion.routes';
 import categoriasRoutes from './modules/categorias/categorias.routes';
 import modificadoresRoutes from './modules/modificadores/modificadores.routes';
 
@@ -29,6 +30,7 @@ apiRouter.use('/auth', authRoutes);
 apiRouter.use('/clientes', clientesRoutes);
 apiRouter.use('/productos', productosRoutes);
 apiRouter.use('/usuarios', usuariosRoutes);
+apiRouter.use('/configuracion', configuracionRoutes);
 apiRouter.use('/categorias', categoriasRoutes); 
 apiRouter.use('/modificadores', modificadoresRoutes);
 
