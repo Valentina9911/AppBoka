@@ -6,6 +6,7 @@ import { RolesPermisosView } from './pages/Admin/RolesPermisosView';
 import { InventarioView } from './pages/Inventario/InventarioView';
 import { EmpleadosView } from './pages/Empleados/EmpleadosView';
 import { ClientesView } from './pages/Clientes/ClientesView';
+import { ConfiguracionView } from './pages/Admin/ConfiguracionView';
 
 function App() {
   const isAuthenticated = useAuthStore(state => state.isAuthenticated);
@@ -22,6 +23,7 @@ function App() {
           <Route path="/inventario" element={<InventarioView />} />
           <Route path="/empleados" element={<EmpleadosView />} />
           <Route path="/clientes" element={<ClientesView />} />
+          <Route path="/configuracion" element={<ConfiguracionView />} />
 
           <Route path="*" element={<Navigate to="/inicio" replace />} />
         </Route>
