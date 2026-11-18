@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useAuthStore } from './store/auth.store';
 import { MainLayout } from './layouts/MainLayout';
 import { LoginView } from './pages/Auth/LoginView';
+import { CierreCajaView } from './pages/Caja/CierreCajaView';
 import { RolesPermisosView } from './pages/Admin/RolesPermisosView';
 import { InventarioView } from './pages/Inventario/InventarioView';
 import { EmpleadosView } from './pages/Empleados/EmpleadosView';
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<Navigate to="/inicio" replace />} />
         <Route element={<MainLayout />}>
           <Route path="/inicio" element={<div className="p-8">Bienvenido a BOKA.</div>} />
+          <Route path="/cierre-caja" element={<CierreCajaView />} />
           <Route path="/roles" element={<RolesPermisosView />} />
           <Route path="/inventario" element={<InventarioView />} />
           <Route path="/empleados" element={<EmpleadosView />} />
