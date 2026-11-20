@@ -5,6 +5,9 @@ import { errorHandler } from './middlewares/error.middleware';
 
 import authRoutes from './modules/auth/auth.routes';
 import clientesRoutes from './modules/clientes/clientes.routes';
+import mesasRoutes from './modules/mesas/mesas.routes';
+import cuentasRoutes from './modules/cuentas/cuentas.routes';
+import ventasRoutes from './modules/ventas/ventas.routes';
 import productosRoutes from './modules/productos/productos.routes';
 import usuariosRoutes from './modules/usuarios/usuarios.routes';
 import cajaRoutes from './modules/caja/caja.routes';
@@ -29,6 +32,9 @@ const apiRouter = express.Router();
 
 apiRouter.use('/auth', authRoutes);
 apiRouter.use('/clientes', clientesRoutes);
+apiRouter.use('/mesas', mesasRoutes);
+apiRouter.use('/cuentas', cuentasRoutes);
+apiRouter.use('/ventas', ventasRoutes);
 apiRouter.use('/productos', productosRoutes);
 apiRouter.use('/usuarios', usuariosRoutes);
 apiRouter.use('/caja', cajaRoutes);
